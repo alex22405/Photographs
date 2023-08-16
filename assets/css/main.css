@@ -1,0 +1,327 @@
+@font-face {
+    font-family: 'arimo';
+    src: url('../fonts/arimo/Arimo-Regular.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'tt-norms';
+    src: url('../fonts/tt-norms/TT_Norms_Pro_Bold.otf');
+}
+
+:root
+{
+    --1: 'arimo';
+    --2: 'tt-norms';
+    --fxs: 0.8rem;
+    --fs: 1.2rem;
+    --fm: 1.5rem;
+    --fb: 3rem;
+}
+
+body
+{
+    font-family: var(--2);
+    overflow: hidden;
+}
+
+/* HEADER */
+.head
+{
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+}
+
+.head_title
+{
+    text-transform: uppercase;
+    font-size: var(--fb);
+    width: 50%;
+    line-height: 10px;
+}
+
+.head_name
+{  
+    font-size: var(--fm);
+    line-height: 15px;
+    margin-top: 20px;
+}
+
+
+.head_name h1
+{
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.head_date
+{
+    margin-top: -30px;
+    font-size: var(--fs);
+}
+
+.head_see
+{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+hr
+{
+    width: 50%;
+}
+
+.main_photos
+{
+    display: flex;
+    padding: 60px;
+}
+
+article
+{
+    margin: 10px;
+}
+
+article img
+{
+    width: 100%;
+}
+
+
+/* MAIN */
+section
+{
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+}
+
+.top_page
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fm);
+}
+
+.top_page p
+{
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.section_col
+{
+    display: flex;
+}
+
+.section_photographer
+{
+    background-image: url(../img/photographer.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.description_photographer
+{
+    display: grid;
+    place-content: center;
+}
+
+.section_col p
+{
+    font-size: var(--fb);
+}
+
+.section_col_text
+{
+    font-family: var(--1);
+}
+
+.section_col p:nth-child(2)
+{
+    font-size: var(--fs);
+}
+
+.col_50
+{
+    width: 50%;
+    height: 500px;
+}
+
+.col_50 img
+{
+    width: 100%;
+}
+
+figure img
+{
+    width: 100%;
+}
+
+figcaption
+{
+    font-family: var(--1);
+    font-size: var(--fxs);
+}
+
+
+/* bandeau */
+
+
+.o-scroll {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100vw;
+  }
+  .has-scroll-smooth .o-scroll {
+    position: relative;
+  }
+
+.c-section {
+    position: relative;
+  }
+
+.c-direction-block_wrapper {
+    margin-top: 15rem;
+  }
+  .c-direction-block {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .c-direction-block_item {
+    position: absolute;
+    font-size: 10vw;
+    white-space: nowrap;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .c-direction-block_item span {
+    display: block;
+    background-color: #000;
+    color: yellow;
+    white-space: nowrap;
+    padding: 0 20px;
+  }
+  .c-direction-block_item.-one {
+    transform: rotate(7deg);
+  }
+  .c-direction-block_item.-two {
+    transform: translateX(-50vw) rotate(-15deg);
+  }
+  .c-direction-block_item.-three {
+    transform: translateX(-10vw);
+  }
+
+
+  .section_experience
+  {
+      background-image: url(../img/experience.jpg);
+      background-size: cover;
+      background-position: center;
+  }
+  
+  .description_experience
+  {
+      display: grid;
+      place-content: center;
+      width: 40%;
+      margin-left: 80px;
+      text-align: justify;
+  }
+
+  .contact
+  {
+    display: grid;
+    place-content: center;
+  }
+
+  .contact h1
+  {
+    font-size: var(--fb);
+  }
+
+  .contact_element
+  {
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 3px;
+  }
+
+  .logo
+  {
+    background-color: black;
+  }
+
+  /* Ajoute ces règles à la fin de ton fichier CSS pour les médias queries */
+
+/* Petits écrans (jusqu'à 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ajuste la taille de la police de base */
+    }
+
+    /* Ajustements pour les en-têtes */
+    .head_title {
+        font-size: 2rem;
+    }
+
+    .head_name {
+        font-size: 1.5rem;
+    }
+
+    .head_date p {
+        font-size: 1rem;
+    }
+
+    .head_see p {
+        font-size: 1rem;
+    }
+
+    hr {
+        width: 70%;
+    }
+
+    /* Ajustements pour les sections */
+    .top_page p {
+        font-size: 1.5rem;
+    }
+
+    .section_col p {
+        font-size: 2rem;
+    }
+
+    .section_col_text {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustements pour les images */
+    .col_50 img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    figure img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    figcaption {
+        font-size: 1rem;
+    }
+}
+
+/* Écrans de taille moyenne (769px à 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Ajoute des ajustements spécifiques si nécessaire */
+}
+
+/* Grand écran (plus de 1024px) */
+@media screen and (min-width: 1025px) {
+    /* Ajoute des ajustements spécifiques si nécessaire */
+}
