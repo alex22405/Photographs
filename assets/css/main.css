@@ -66,11 +66,19 @@ body
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+    font-size: var(--fs);
 }
 
 hr
 {
     width: 50%;
+}
+.logo
+{
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
 }
 
 .main_photos
@@ -93,9 +101,10 @@ article img
 /* MAIN */
 section
 {
-    height: 100vh;
+    height: 80vh;
     width: 90%;
     margin: auto;
+    margin-top: 50px;
 }
 
 .top_page
@@ -219,6 +228,11 @@ figcaption
   }
 
 
+  .experience
+  {
+    display: flex;
+  }
+
   .section_experience
   {
       background-image: url(../img/experience.jpg);
@@ -260,68 +274,197 @@ figcaption
 
   /* Ajoute ces règles à la fin de ton fichier CSS pour les médias queries */
 
-/* Petits écrans (jusqu'à 768px) */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 16px; /* Ajuste la taille de la police de base */
+@media screen and (max-width: 640px) {
+    :root{
+        --fxs: 1rem;
+        --fs: 0.6rem;
+        --fm: 0.6rem;
+        --fb: 1.3rem;
     }
-
-    /* Ajustements pour les en-têtes */
-    .head_title {
-        font-size: 2rem;
+    .head
+    {
+        padding: 25px;
     }
-
-    .head_name {
-        font-size: 1.5rem;
+    .main_photos
+    {
+        display: grid;
+        width: 50%;
     }
-
-    .head_date p {
-        font-size: 1rem;
+    figure
+    {
+        display: flex;
     }
-
-    .head_see p {
-        font-size: 1rem;
+    .main_photos
+    {
+        display: grid;
+        /* margin: auto; */
     }
-
-    hr {
+    figure img
+    {
+        width: 200px;
+    }   
+    .col_50
+    {
+        margin: auto;
+        width: 100%;
+    }
+    .col_photographer
+    {
+        margin-top: -150px;
+    }
+    .section_col
+    {
+        display: grid;
+    }
+    .experience
+    {
+        display: grid;
+        font-size: small;
+    }
+    .description_experience
+    {
+        margin-top: -120px;
+    }
+    section
+    {
+        height: auto;
+        width: 70%;
+        margin-top: 20px;
+        margin: auto;
+    }
+    .section_photographer
+    {
+        margin: auto;
+        margin-top: -150px;
+    }
+    .c-direction-block_item
+    {
+        margin-top: -150px;
+    }
+    .contact
+    {
+        margin-top: 30px;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 980px) {
+    :root{
+        --fxs: 0.6rem;
+        --fs: 0.8rem;
+        --fm: 0.8rem;
+        --fb: 2rem;
+    }
+    .main_photos
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border: 1px solid;
+        overflow: hidden;
+    }
+    figure img
+    {
+        width: 250px;
+        margin-left: -50px;
+    }  
+    .col_50
+    {
+        margin: auto;
+        width: 100%;
+    }
+    .section_col
+    {
+        display: grid;
+    }
+    section
+    {
+        height: auto;
         width: 70%;
     }
-
-    /* Ajustements pour les sections */
-    .top_page p {
-        font-size: 1.5rem;
+    .section_experience
+    {
+        margin: auto;
     }
-
-    .section_col p {
-        font-size: 2rem;
-    }
-
-    .section_col_text {
-        font-size: 1.2rem;
-    }
-
-    /* Ajustements pour les images */
-    .col_50 img {
-        height: auto;
-        max-width: 100%;
-    }
-
-    figure img {
-        height: auto;
-        max-width: 100%;
-    }
-
-    figcaption {
-        font-size: 1rem;
+    .section_photographer
+    {
+        margin: auto;
     }
 }
 
 /* Écrans de taille moyenne (769px à 1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Ajoute des ajustements spécifiques si nécessaire */
+
 }
 
 /* Grand écran (plus de 1024px) */
 @media screen and (min-width: 1025px) {
-    /* Ajoute des ajustements spécifiques si nécessaire */
+
+}
+
+/* caroussel */
+/*  Caroussel  */
+.container {
+	max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+
+/* --- --- CAROUSEL --- --- */
+.carousel__container {
+	position: relative;
+}
+
+.carousel__prev,
+.carousel__next {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #fff;
+	opacity: 20%;
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+	opacity: 100%;
+}
+
+.carousel__prev {
+	left: -30px;
+    color: black;
+}
+
+.carousel__next {
+	right: -30px;
+    color: black;
+}
+
+.carousel__list {
+	overflow: hidden;
+}
+
+.carousel__element {
+	text-align: center;
+    padding: 10px;
+}
+
+.carousel__indicator .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicator .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicator .glider-dot.active {
+	opacity: 1;
 }
